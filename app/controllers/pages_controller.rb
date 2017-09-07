@@ -10,7 +10,11 @@ class PagesController < ApplicationController
   
   def seed_fake_definition
     @term.strip!
-    cookies[@term] = fake_definitions if cookies[@term].blank?
+    if cookies[@term].blank?
+      cookies[@term] = { expires: (2.hours.from_now), value: fake_definitions } 
+    else
+      cookies[@term] = { expires: (2.hours.from_now), value: cookies[@term] }
+    end
   end
   
   def map_definitions(word)
