@@ -1,1 +1,8 @@
 <div><%= @term %></div>
+<% unless @definitions.blank? %>
+  <% @definitions.each_with_index do |d, index| %>
+    <div><%= '('+ (1 + index).to_s + ') ' + '[' + d + '];'%></div>
+  <% end %>
+<% else %>
+  <div>This word is not valid.</div>
+<% end %>
