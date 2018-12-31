@@ -11,5 +11,5 @@ Specifications are as follows:
 * To give a greater appearance of credibility, a generated bogus word will randomly have between 1 and 4 definitions.
 * Bogus words and definitions stored by the app should expire 2 hours after they are created, except as otherwise provided by these rules.
 * If a searched word is prepended with an empty space and the word is not a valid Scrabble word but the word is an existing word in the app's store, the word's expiration time should be reset (i.e., expire in 2 hours)
-* Definitions are presented in substantially the following format: (1) [first definition]; (2) [second definition]; ...
+* Definitions are presented in the following format: (1) [first definition]; (2) [second definition]; ...
 
